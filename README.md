@@ -1,4 +1,32 @@
 # chat
+let chat1 = this.props.chathistory.map(
+            function(item, i){
+                return item.sender?
+                    <div key={i} className="d-flex justify-content-start mb-4">
+                        <div className="img_cont_msg">
+                            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" className="rounded-circle user_img_msg"/>
+                        </div>
+                        <div className="msg_cotainer">
+                        {"You: "+item.message}
+                            <span className="msg_time">8:40 AM, Today</span>
+                        </div>
+                    </div>
+                : 
+                    // eslint-disable-next-line no-unreachable
+                    <div key={i} className="d-flex justify-content-end mb-4">
+								<div className="msg_cotainer_send">
+                                {"Bot: "+item.text}
+									<span className="msg_time_send">8:55 AM, Today</span>
+								</div>
+								<div className="img_cont_msg">
+							        <img src="https://sun9-33.userapi.com/c540100/v540100324/4d824/GlVv9a61NnE.jpg" className="rounded-circle user_img_msg" />
+								</div>
+							</div>
+            }
+        )
+	
+	
+	
 
 <div className=" chat">
 					<div className="card">
